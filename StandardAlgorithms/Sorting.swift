@@ -44,10 +44,10 @@ class Sorting {
                 rightPointer += 1
             }
             
-            if leftPointer <= left.count {
+            if leftPointer >= left.count {
                 merged = true
                 mergedArray.append(contentsOf: right.suffix(right.count-rightPointer))
-            } else if rightPointer <= right.count {
+            } else if rightPointer >= right.count {
                 merged = true
                 mergedArray.append(contentsOf: left.suffix(left.count-leftPointer))
             }

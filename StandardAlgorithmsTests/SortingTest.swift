@@ -34,23 +34,19 @@ class SortingTest: XCTestCase {
         
     }
     
-    func testMerge() {
+    func testMergeSortWithVariousIntegerArraysReturnsEachOneSorted() {
+        // Arrange
         let sorting = Sorting()
+        let testData = [(data: [6, 3, 9, 1, 2], expected: [1, 2, 3, 6, 9]),
+                        (data: [1, 100, 4, 3, 15], expected: [1, 3, 4, 15, 100]),
+                        (data: [2, 8, 1, 12, 9], expected: [1, 2, 8, 9, 12]),
+                        (data: [], expected: [])]
+        // Act
+        for test in testData {
+            let result = sorting.mergeSort(data: test.data)
+            XCTAssertEqual(result, test.expected)
+        }
     }
-    
-//    func testMergeSortWithVariousIntegerArraysReturnsEachOneSorted() {
-//        // Arrange
-//        let sorting = Sorting()
-//        let testData = [(data: [6, 3, 9, 1, 2], expected: [1, 2, 3, 6, 9]),
-//                        (data: [1, 100, 4, 3, 15], expected: [1, 3, 4, 15, 100]),
-//                        (data: [2, 8, 1, 12, 9], expected: [1, 2, 8, 9, 12]),
-//                        (data: [], expected: [])]
-//        // Act
-//        for test in testData {
-//            let result = sorting.mergeSort(data: test.data)
-//            XCTAssertEqual(result, test.expected)
-//        }
-//    }
     
     func testQuickSortWithVariousIntegerArraysReturnsEachOneSorted() {
         // Arrange
