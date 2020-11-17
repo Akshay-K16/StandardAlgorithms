@@ -75,5 +75,4 @@ class SortingTest: XCTestCase {
             XCTAssertEqual(result, test.expected)
         }
     }
-
 }

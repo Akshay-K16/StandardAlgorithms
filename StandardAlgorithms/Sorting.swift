@@ -28,7 +28,7 @@ class Sorting {
     return newArray
     }
     
-    func merge(left: [Int], right: [Int]) -> [Int] {
+    private func merge(left: [Int], right: [Int]) -> [Int] {
         var mergedArray = [Int]()
         
         var merged = false
