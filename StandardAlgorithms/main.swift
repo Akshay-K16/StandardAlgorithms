@@ -10,6 +10,7 @@ import Foundation
 func main() {
     
     let choice = getValue("Choose an Algorithm: \n\n\t1. Bubble Sort\n\t2. Merge Sort\n\t3. Quick Sort\n\t4. Insertion Sort\n\t5. Linear Search\n\t6. Binary Search")
+    print(choice)
     
     bubbleSort()
     mergeSort()

@@ -29,9 +29,9 @@ class SortingTest: XCTestCase {
         // Act
         for test in testData {
             let result = sorting.bubbleSort(data: test.data)
+            // Assert
             XCTAssertEqual(result, test.expected)
         }
-        
     }
     
     func testMergeSortWithVariousIntegerArraysReturnsEachOneSorted() {
@@ -44,6 +44,7 @@ class SortingTest: XCTestCase {
         // Act
         for test in testData {
             let result = sorting.mergeSort(data: test.data)
+            // Assert
             XCTAssertEqual(result, test.expected)
         }
     }
@@ -58,6 +59,7 @@ class SortingTest: XCTestCase {
         // Act
         for test in testData {
             let result = sorting.quickSort(data: test.data)
+            // Assert
             XCTAssertEqual(result, test.expected)
         }
     }
@@ -72,6 +74,7 @@ class SortingTest: XCTestCase {
         // Act
         for test in testData {
             let result = sorting.insertionSort(data: test.data)
+            // Assert
             XCTAssertEqual(result, test.expected)
         }
     }
