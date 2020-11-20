@@ -26,6 +26,14 @@ class Unknown {
             var rep = true
             while rep {
                 if i+count >= data.count {
+                    rep = false
+                    if count > highestCount {
+                        highestCount = count
+                        mode.removeAll()
+                        mode.append(data[i])
+                    } else if count == highestCount {
+                        mode.append(data[i])
+                    }
                     break
                 }
                 if data[i] == data[i+count] {
@@ -42,6 +50,17 @@ class Unknown {
                 }
             }
         }
+        
         return mode
     }
+    
+    func problem3(data: [Int]) -> Int {
+        
+        let smallest = data.min()
+        let smallestIndex = data.firstIndex(of: smallest!)
+        var numbers = data
+        let _ = numbers.remove(at: smallestIndex!)
+        return numbers.min()!
+    }
+        
 }
