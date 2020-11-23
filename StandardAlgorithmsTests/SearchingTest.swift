@@ -23,6 +23,63 @@ class SearchingTest: XCTestCase {
         }
     }
     
+    func testPerformanceOfLinearSearchWithIntegerArrayOfLength5() {
+        let sorting = Searching()
+        var data = [Int]()
+        let range = 0..<5
+        let index = Int.random(in: range)
+        var toFind = Int()
+        for i in range{
+            let number = Int.random(in: 0...1000000)
+            data.append(number)
+            if i == index {
+                toFind = number
+            }
+        }
+        
+        measure {
+            let _ = sorting.linearSearch(data: data, toFind: toFind)
+        }
+    }
+    
+    func testPerformanceOfLinearSearchWithIntegerArrayOfLength50() {
+        let sorting = Searching()
+        var data = [Int]()
+        let range = 0..<50
+        let index = Int.random(in: range)
+        var toFind = Int()
+        for i in range{
+            let number = Int.random(in: 0...1000000)
+            data.append(number)
+            if i == index {
+                toFind = number
+            }
+        }
+        
+        measure {
+            let _ = sorting.linearSearch(data: data, toFind: toFind)
+        }
+    }
+    
+    func testPerformanceOfLinearSearchWithIntegerArrayOfLength500() {
+        let sorting = Searching()
+        var data = [Int]()
+        let range = 0..<500
+        let index = Int.random(in: range)
+        var toFind = Int()
+        for i in range{
+            let number = Int.random(in: 0...1000000)
+            data.append(number)
+            if i == index {
+                toFind = number
+            }
+        }
+        
+        measure {
+            let _ = sorting.linearSearch(data: data, toFind: toFind)
+        }
+    }
+    
     func testBinarySearchWithVariousIntegerArraysAndIntegers() {
         // Arrange
         let searching = Searching()
@@ -34,6 +91,63 @@ class SearchingTest: XCTestCase {
         for test in testData {
             let result = searching.binarySearch(data: test.data, toFind: test.toFind)
             XCTAssertEqual(result, test.expected)
+        }
+    }
+    
+    func testPerformanceOfBinarySearchWithIntegerArrayOfLength5() {
+        let sorting = Searching()
+        var data = [Int]()
+        let range = 0..<5
+        let index = Int.random(in: range)
+        var toFind = Int()
+        for i in range{
+            let number = Int.random(in: 0...1000000)
+            data.append(number)
+            if i == index {
+                toFind = number
+            }
+        }
+        
+        measure {
+            let _ = sorting.binarySearch(data: data, toFind: toFind)
+        }
+    }
+    
+    func testPerformanceOfBinarySearchWithIntegerArrayOfLength50() {
+        let sorting = Searching()
+        var data = [Int]()
+        let range = 0..<50
+        let index = Int.random(in: range)
+        var toFind = Int()
+        for i in range{
+            let number = Int.random(in: 0...1000000)
+            data.append(number)
+            if i == index {
+                toFind = number
+            }
+        }
+        
+        measure {
+            let _ = sorting.binarySearch(data: data, toFind: toFind)
+        }
+    }
+    
+    func testPerformanceOfBinarySearchWithIntegerArrayOfLength500() {
+        let sorting = Searching()
+        var data = [Int]()
+        let range = 0..<500
+        let index = Int.random(in: range)
+        var toFind = Int()
+        for i in range{
+            let number = Int.random(in: 0...1000000)
+            data.append(number)
+            if i == index {
+                toFind = number
+            }
+        }
+        
+        measure {
+            let _ = sorting.binarySearch(data: data, toFind: toFind)
         }
     }
     

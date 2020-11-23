@@ -56,11 +56,7 @@ class Unknown {
     
     func problem3(data: [Int]) -> Int {
         
-        let smallest = data.min()
-        let smallestIndex = data.firstIndex(of: smallest!)
-        var numbers = data
-        let _ = numbers.remove(at: smallestIndex!)
-        return numbers.min()!
+        return 0
     }
         
 }
